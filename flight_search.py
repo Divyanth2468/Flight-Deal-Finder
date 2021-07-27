@@ -8,7 +8,7 @@ class FlightSearch:
     def __init__(self, data):
         self.data = data
         self.flight_search_endpoint = 'https://tequila-api.kiwi.com'
-        self.API_KEY = "zWEDT49EhU9Wdr4zoTAC6ZwfeqXXSGAw"
+        self.API_KEY = os.getenv("Flight_API_KEY")
         self.today = datetime.now().strftime("%d/%m/%Y")
         self.matching_flights_endpoint = 'http://tequila-api.kiwi.com/v2/search'
         self.headers = {
