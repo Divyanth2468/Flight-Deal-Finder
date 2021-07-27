@@ -1,12 +1,12 @@
 import requests
-
+import os
 
 class DataManager:
     def __init__(self):
-        self.endpoint = 'https://api.sheety.co/472cf5c878778bec1e64deb2aaa4ede2/flightSearch/sheet1'
-        self.users_endpoint = 'https://api.sheety.co/472cf5c878778bec1e64deb2aaa4ede2/flightSearch/users'
-        self.APP_ID = 'df40ca29'
-        self.API_KEY = '472cf5c878778bec1e64deb2aaa4ede2'
+        self.endpoint = os.getenv("end_point")
+        self.users_endpoint = os.getenv("users_end_point")
+        self.APP_ID = os.getenv("APP_ID")
+        self.API_KEY = os.getenv("SPI_KEY")
         self.headers = {
             "Content-Type": "application/json"
         }
