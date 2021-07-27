@@ -1,10 +1,11 @@
 import smtplib
-my_email = 'divyanthsatya86@gmail.com'
-password = 'Dash240608'
-SHEETY_API_ENDPOINT = 'https://api.sheety.co/c82ed300dae3f4bf5d1bae411e9e3038/flightSearch/users'
+import os
+my_email = os.getenv("email")
+password = os.getenv("password")
+SHEETY_API_ENDPOINT = os.getenv("sheety_API")
 # from twilio.rest import Client
-# account_ssid = 'ACc74852565a8a262a1ee9e8f8d9852899'
-# auth_token = 'cfdecdf26c09fd59091bdd274750f344'
+# account_ssid = os.getenv("account_ssid")
+# auth_token = os.getenv("auth_token")
 #
 #
 # class NotificationManager:
