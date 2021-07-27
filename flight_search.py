@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from flight_data import FlightData
-
+import os
 
 class FlightSearch:
     def __init__(self, data):
